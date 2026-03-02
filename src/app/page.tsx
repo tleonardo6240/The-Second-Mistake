@@ -4,8 +4,8 @@ import { getAllPosts, getPostsBySection, getAllTags } from "@/lib/posts";
 
 export default function HomePage() {
   const posts = getAllPosts();
-  const mlb = getPostsBySection("mlb").slice(0, 3);
-  const nfl = getPostsBySection("nfl").slice(0, 3);
+  const MLB = getPostsBySection("MLB").slice(0, 3);
+  const NFL = getPostsBySection("NFL").slice(0, 3);
   const tags = getAllTags().slice(0, 12);
 
   return (
@@ -20,25 +20,25 @@ export default function HomePage() {
 
             <nav className="flex flex-col items-center gap-3">
               <Link
-                href="/section/mlb"
+                href="/section/MLB"
                 className="hover:text-neutral-900 hover:underline decoration-[rgb(var(--accent))] underline-offset-4"
               >
                 MLB
               </Link>
               <Link
-                href="/tags/yankees"
+                href="/tags/Yankees"
                 className="hover:text-neutral-900 hover:underline decoration-[rgb(var(--accent))] underline-offset-4"
               >
                 Yanks
               </Link>
               <Link
-                href="/section/nfl"
+                href="/section/NFL"
                 className="hover:text-neutral-900 hover:underline decoration-[rgb(var(--accent))] underline-offset-4"
               >
                 NFL
               </Link>
               <Link
-                href="/tags/giants"
+                href="/tags/Giants"
                 className="hover:text-neutral-900 hover:underline decoration-[rgb(var(--accent))] underline-offset-4"
               >
                 NYG
@@ -64,7 +64,7 @@ export default function HomePage() {
               <div className="kicker">MLB</div>
               <h2 className="mt-2 text-lg font-semibold">Latest in Baseball</h2>
               <ul className="mt-4 space-y-3">
-                {mlb.map((p) => (
+                {MLB.map((p) => (
                   <li key={p.slug} className="text-sm">
                     <Link className="font-medium hover:underline" href={`/posts/${p.slug}`}>
                       {p.title}
@@ -75,7 +75,7 @@ export default function HomePage() {
                   </li>
                 ))}
               </ul>
-              <Link href="/section/mlb" className="mt-4 inline-block text-sm hover:underline">
+              <Link href="/section/MLB" className="mt-4 inline-block text-sm hover:underline">
                 View MLB →
               </Link>
             </div>
@@ -84,7 +84,7 @@ export default function HomePage() {
               <div className="kicker">NFL</div>
               <h2 className="mt-2 text-lg font-semibold">Latest in Football</h2>
               <ul className="mt-4 space-y-3">
-                {nfl.map((p) => (
+                {NFL.map((p) => (
                   <li key={p.slug} className="text-sm">
                     <Link className="font-medium hover:underline" href={`/posts/${p.slug}`}>
                       {p.title}
@@ -95,7 +95,7 @@ export default function HomePage() {
                   </li>
                 ))}
               </ul>
-              <Link href="/section/nfl" className="mt-4 inline-block text-sm hover:underline">
+              <Link href="/section/NFL" className="mt-4 inline-block text-sm hover:underline">
                 View NFL →
               </Link>
             </div>
@@ -108,8 +108,8 @@ export default function HomePage() {
                 <li key={p.slug} className="card card-hover p-5">
                   <div className="kicker">
                     {p.section}
-                    {p.tags.includes("yankees") ? " • yankees" : ""}
-                    {p.tags.includes("giants") ? " • giants" : ""}
+                    {p.tags.includes("Yankees") ? " • Yankees" : ""}
+                    {p.tags.includes("Giants") ? " • Giants" : ""}
                   </div>
 
                   <h4 className="mt-2 text-base font-semibold">
@@ -160,7 +160,7 @@ export default function HomePage() {
                 What we're focused on this week.
               </p>
               <Link
-                href="/tags/yankees"
+                href="/tags/Yankees"
                 className="mt-3 inline-block text-sm hover:underline decoration-[rgb(var(--accent))] underline-offset-4"
               >
                 Read Yankees →
@@ -200,19 +200,19 @@ export default function HomePage() {
               <div className="mt-3 flex flex-col gap-2 text-sm">
                 <Link
                   className="hover:underline decoration-[rgb(var(--accent))] underline-offset-4"
-                  href="/section/mlb"
+                  href="/section/MLB"
                 >
                   MLB →
                 </Link>
                 <Link
                   className="hover:underline decoration-[rgb(var(--accent))] underline-offset-4"
-                  href="/section/nfl"
+                  href="/section/NFL"
                 >
                   NFL →
                 </Link>
                 <Link
                   className="hover:underline decoration-[rgb(var(--accent))] underline-offset-4"
-                  href="/tags/yankees"
+                  href="/tags/Yankees"
                 >
                   Yankees →
                 </Link>
