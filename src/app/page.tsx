@@ -62,7 +62,7 @@ export default function HomePage() {
           <section className="mt-10 grid gap-4 md:grid-cols-2">
             <div className="card card-hover p-6">
               <div className="kicker">MLB</div>
-              <h2 className="mt-2 text-lg font-semibold">Latest in baseball</h2>
+              <h2 className="mt-2 text-lg font-semibold">Latest in Baseball</h2>
               <ul className="mt-4 space-y-3">
                 {mlb.map((p) => (
                   <li key={p.slug} className="text-sm">
@@ -82,7 +82,7 @@ export default function HomePage() {
 
             <div className="card card-hover p-6">
               <div className="kicker">NFL</div>
-              <h2 className="mt-2 text-lg font-semibold">Latest in football</h2>
+              <h2 className="mt-2 text-lg font-semibold">Latest in Football</h2>
               <ul className="mt-4 space-y-3">
                 {nfl.map((p) => (
                   <li key={p.slug} className="text-sm">
@@ -157,7 +157,7 @@ export default function HomePage() {
             <div className="card p-5">
               <div className="kicker">Yankees</div>
               <p className="mt-2 text-sm text-neutral-600">
-                Weekly notes focused on signals, not noise.
+                What we're focused on this week.
               </p>
               <Link
                 href="/tags/yankees"
@@ -171,7 +171,7 @@ export default function HomePage() {
             <div className="card p-5">
               <div className="kicker">Giants</div>
               <p className="mt-2 text-sm text-neutral-600">
-                Weekly notes, decisions, and what I learned — no tilt.
+                Navigating the offseason.
               </p>
               <Link
                 href="/tags/giants"
@@ -184,7 +184,7 @@ export default function HomePage() {
             <div className="card p-5">
               <div className="kicker">Newsletter</div>
               <p className="mt-2 text-sm text-neutral-600">
-                One email a week. The best reads + what I learned.
+                Catch up in an email.
               </p>
               <button
                 className="mt-4 w-full rounded-xl border border-neutral-300 bg-white px-3 py-2 text-sm font-medium hover:border-neutral-400"
