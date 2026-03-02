@@ -27,3 +27,27 @@ a {
 ::selection {
   background: rgba(var(--accent), 0.22);
 }
+
+/* Utility classes */
+.container-page {
+  @apply mx-auto max-w-4xl px-4;
+}
+
+.card {
+  @apply rounded-2xl border border-neutral-200 bg-white;
+}
+
+.card-hover {
+  @apply transition hover:border-neutral-300 hover:shadow-sm;
+}
+
+.kicker {
+  @apply text-[11px] font-semibold uppercase tracking-[0.14em] text-neutral-500;
+}
+
+.accent-link {
+  color: rgb(var(--accent-2));
+}
+.accent-link:hover {
+  color: rgb(var(--accent));
+}
