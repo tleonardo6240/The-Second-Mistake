@@ -4,8 +4,27 @@
 
 :root {
   color-scheme: light;
+
+  /* Core palette */
+  --bg: 255 255 255;
+  --fg: 17 17 17;
+  --muted: 82 82 82;
+  --border: 229 229 229;
+
+  /* Accent (Athletic-ish green). Change these 3 numbers to adjust color */
+  --accent: 20 184 166; /* teal */
+  --accent-2: 15 118 110; /* darker teal */
 }
 
 body {
-  @apply bg-white text-neutral-900;
+  background: rgb(var(--bg));
+  color: rgb(var(--fg));
+}
+
+a {
+  text-underline-offset: 3px;
+}
+
+::selection {
+  background: rgba(var(--accent), 0.22);
 }
