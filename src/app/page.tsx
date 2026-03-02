@@ -20,7 +20,7 @@ export default function HomePage() {
               style={{ background: "rgb(var(--accent))" }}
             />
             <p className="max-w-2xl text-neutral-600">
-              Sports are not simply about winning. Sometimes its simply about learning. And so is
+              Sports are not always about winning. Sometimes its simply about learning. And so is
               life.
             </p>
           </header>
