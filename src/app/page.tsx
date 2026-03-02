@@ -29,7 +29,7 @@ export default function HomePage() {
                 href="/tags/Yankees"
                 className="hover:text-neutral-900 hover:underline decoration-[rgb(var(--accent))] underline-offset-4"
               >
-                Yanks
+                NYY
               </Link>
               <Link
                 href="/section/NFL"
