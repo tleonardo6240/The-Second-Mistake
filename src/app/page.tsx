@@ -9,18 +9,45 @@ export default function HomePage() {
 
   return (
     <main className="container-page py-10">
-      <div className="grid gap-10 lg:grid-cols-[1fr_280px] lg:gap-12">
-        {/* Left column */}
+      <div className="grid gap-10 lg:grid-cols-[56px_1fr_280px] lg:gap-12">
+        {/* Left rail */}
+        <aside className="hidden lg:block">
+          <div className="sticky top-6 flex flex-col items-center gap-5 text-xs text-neutral-500">
+            <div className="mt-1 flex h-9 w-9 items-center justify-center rounded-xl border border-neutral-200 bg-white font-semibold text-[rgb(var(--accent))]">
+              TSM
+            </div>
+
+            <nav className="flex flex-col items-center gap-3">
+              <Link
+                href="/section/mlb"
+                className="hover:text-neutral-900 hover:underline decoration-[rgb(var(--accent))] underline-offset-4"
+              >
+                MLB
+              </Link>
+              <Link
+                href="/tags/yankees"
+                className="hover:text-neutral-900 hover:underline decoration-[rgb(var(--accent))] underline-offset-4"
+              >
+                Yanks
+              </Link>
+              <Link
+                href="/section/nfl"
+                className="hover:text-neutral-900 hover:underline decoration-[rgb(var(--accent))] underline-offset-4"
+              >
+                NFL
+              </Link>
+            </nav>
+          </div>
+        </aside>
+
+        {/* Main column */}
         <div>
           <header className="space-y-3">
             <div className="kicker">MLB • NFL • Yankees</div>
             <h1 className="text-4xl font-semibold tracking-tight">The Second Mistake</h1>
-            <div
-              className="h-[2px] w-12 rounded"
-              style={{ background: "rgb(var(--accent))" }}
-            />
+            <div className="h-[2px] w-12 rounded" style={{ background: "rgb(var(--accent))" }} />
             <p className="max-w-2xl text-neutral-600">
-              Sports are not always about winning. Sometimes its simply about learning. And so is
+              Sports are not simply about winning. Sometimes its simply about learning. And so is
               life.
             </p>
           </header>
@@ -28,7 +55,7 @@ export default function HomePage() {
           <section className="mt-10 grid gap-4 md:grid-cols-2">
             <div className="card card-hover p-6">
               <div className="kicker">MLB</div>
-              <h2 className="mt-2 text-lg font-semibold">Latest in Baseball</h2>
+              <h2 className="mt-2 text-lg font-semibold">Latest in baseball</h2>
               <ul className="mt-4 space-y-3">
                 {mlb.map((p) => (
                   <li key={p.slug} className="text-sm">
@@ -48,7 +75,7 @@ export default function HomePage() {
 
             <div className="card card-hover p-6">
               <div className="kicker">NFL</div>
-              <h2 className="mt-2 text-lg font-semibold">Latest in Football</h2>
+              <h2 className="mt-2 text-lg font-semibold">Latest in football</h2>
               <ul className="mt-4 space-y-3">
                 {nfl.map((p) => (
                   <li key={p.slug} className="text-sm">
@@ -116,13 +143,13 @@ export default function HomePage() {
           </section>
         </div>
 
-        {/* Right column */}
+        {/* Right rail */}
         <aside className="hidden lg:block border-l border-neutral-200 pl-8">
           <div className="sticky top-6 space-y-6">
             <div className="card p-5">
               <div className="kicker">Yankees</div>
               <p className="mt-2 text-sm text-neutral-600">
-                What we're paying attention to this week.
+                Weekly notes focused on signals, not noise.
               </p>
               <Link
                 href="/tags/yankees"
@@ -135,7 +162,7 @@ export default function HomePage() {
             <div className="card p-5">
               <div className="kicker">Newsletter</div>
               <p className="mt-2 text-sm text-neutral-600">
-                One email a week.
+                One email a week. The best reads + what I learned.
               </p>
               <button
                 className="mt-4 w-full rounded-xl border border-neutral-300 bg-white px-3 py-2 text-sm font-medium hover:border-neutral-400"
