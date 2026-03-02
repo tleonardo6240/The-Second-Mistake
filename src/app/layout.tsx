@@ -11,7 +11,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        <div className="border-b bg-white/85 backdrop-blur">
+        <div className="border-b border-neutral-200 bg-white/85 backdrop-blur">
           <div className="container-page flex items-center justify-between py-4">
             <div className="flex items-baseline gap-3">
               <Link href="/" className="text-[15px] font-semibold tracking-tight">
@@ -27,7 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div className="relative group">
                 <Link
                   href="/section/mlb"
-                  className="inline-flex items-center gap-1 hover:text-neutral-900"
+                  className="inline-flex items-center gap-1 hover:text-neutral-900 hover:underline decoration-[rgb(var(--accent))] decoration-2 underline-offset-[6px]"
                 >
                   MLB
                   <svg
@@ -75,14 +75,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </div>
 
               {/* NFL */}
-              <Link href="/section/nfl" className="hover:text-neutral-900">
+              <Link
+                href="/section/nfl"
+                className="hover:text-neutral-900 hover:underline decoration-[rgb(var(--accent))] decoration-2 underline-offset-[6px]"
+              >
                 NFL
               </Link>
 
               {/* Subscribe pill */}
               <Link
                 href="/"
-                className="ml-1 rounded-full border px-3 py-1 text-xs font-medium text-neutral-800 hover:bg-black/5"
+                className="ml-1 rounded-full border border-neutral-300 bg-white px-3 py-1 text-xs font-medium text-neutral-900 hover:border-neutral-400"
               >
                 Subscribe
               </Link>
@@ -92,7 +95,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {children}
 
-        <footer className="mt-14 border-t">
+        <footer className="mt-14 border-t border-neutral-200">
           <div className="container-page py-8 text-sm text-neutral-500">
             © {new Date().getFullYear()} The Second Mistake
           </div>
