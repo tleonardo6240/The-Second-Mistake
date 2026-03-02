@@ -1,11 +1,16 @@
 import Link from "next/link";
 import { getPostsBySection, type Section } from "@/lib/posts";
 
-export default function SectionPage({ params }: { params: { section: string } }) {
-  const section = params.section.toLowerCase() as Section;
-  const posts = getPostsBySection(section);
+export default async function SectionPage({
+  params,
+}: {
+  params: Promise<{ section: string }>;
+}) {
+  const { section: rawSection } = await params;
+  const section = rawSection.toLowerCase() as Section;
 
-  const title = section === "mlb" ? "MLB" : section === "nfl" ? "NFL" : params.section;
+  const posts = getPostsBySection(section);
+  const title = section === "mlb" ? "MLB" : section === "nfl" ? "NFL" : rawSection;
 
   return (
     <main className="mx-auto max-w-4xl px-4 py-10">
