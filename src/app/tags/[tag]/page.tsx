@@ -1,8 +1,14 @@
 import Link from "next/link";
 import { getAllPosts } from "@/lib/posts";
 
-export default function TagPage({ params }: { params: { tag: string } }) {
-  const tag = decodeURIComponent(params.tag).toLowerCase();
+export default async function TagPage({
+  params,
+}: {
+  params: Promise<{ tag: string }>;
+}) {
+  const { tag: rawTag } = await params;
+  const tag = decodeURIComponent(rawTag).toLowerCase();
+
   const posts = getAllPosts().filter((p) => p.tags.includes(tag));
 
   return (
