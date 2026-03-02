@@ -122,7 +122,7 @@ export default function HomePage() {
             <div className="card p-5">
               <div className="kicker">Yankees</div>
               <p className="mt-2 text-sm text-neutral-600">
-                Weekly notes focused on signals, not noise.
+                What we're paying attention to this week.
               </p>
               <Link
                 href="/tags/yankees"
@@ -135,7 +135,7 @@ export default function HomePage() {
             <div className="card p-5">
               <div className="kicker">Newsletter</div>
               <p className="mt-2 text-sm text-neutral-600">
-                One email a week. The best reads + what I learned.
+                One email a week.
               </p>
               <button
                 className="mt-4 w-full rounded-xl border border-neutral-300 bg-white px-3 py-2 text-sm font-medium hover:border-neutral-400"
