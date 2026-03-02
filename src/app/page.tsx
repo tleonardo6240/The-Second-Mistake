@@ -28,7 +28,7 @@ export default function HomePage() {
           <section className="mt-10 grid gap-4 md:grid-cols-2">
             <div className="card card-hover p-6">
               <div className="kicker">MLB</div>
-              <h2 className="mt-2 text-lg font-semibold">Latest in baseball</h2>
+              <h2 className="mt-2 text-lg font-semibold">Latest in Baseball</h2>
               <ul className="mt-4 space-y-3">
                 {mlb.map((p) => (
                   <li key={p.slug} className="text-sm">
@@ -48,7 +48,7 @@ export default function HomePage() {
 
             <div className="card card-hover p-6">
               <div className="kicker">NFL</div>
-              <h2 className="mt-2 text-lg font-semibold">Latest in football</h2>
+              <h2 className="mt-2 text-lg font-semibold">Latest in Football</h2>
               <ul className="mt-4 space-y-3">
                 {nfl.map((p) => (
                   <li key={p.slug} className="text-sm">
