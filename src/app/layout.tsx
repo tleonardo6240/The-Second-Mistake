@@ -1,16 +1,22 @@
 import "./globals.css";
 import Link from "next/link";
+import { Source_Sans_3 } from "next/font/google";
 
 export const metadata = {
   title: "The Second Mistake",
   description:
-    "Sports are not simply about winning. Sometimes its simply about learning. And so is life.",
+    "Sports are not always about winning. Sometimes its simply about learning. And so is life.",
 };
+
+const sourceSans = Source_Sans_3({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      <body className={sourceSans.className}>
         <div
           className="border-b"
           style={{
