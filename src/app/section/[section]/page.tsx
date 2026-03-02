@@ -10,17 +10,17 @@ export default async function SectionPage({
   const section = rawSection.toLowerCase() as Section;
 
   const posts = getPostsBySection(section);
-  const title = section === "mlb" ? "MLB" : section === "nfl" ? "NFL" : rawSection;
+  const title = section === "MLB" ? "MLB" : section === "NFL" ? "NFL" : rawSection;
 
   return (
     <main className="container-page py-10">
       <h1 className="text-2xl font-semibold">{title}</h1>
 
-      {section === "mlb" && (
+      {section === "MLB" && (
         <div className="mt-3 text-sm text-neutral-600">
           Subsection:{" "}
           <Link
-            href="/tags/yankees"
+            href="/tags/Yankees"
             className="hover:underline decoration-[rgb(var(--accent))] underline-offset-4"
           >
             Yankees
@@ -28,11 +28,11 @@ export default async function SectionPage({
         </div>
       )}
 
-      {section === "nfl" && (
+      {section === "NFL" && (
         <div className="mt-3 text-sm text-neutral-600">
           Subsection:{" "}
           <Link
-            href="/tags/giants"
+            href="/tags/Giants"
             className="hover:underline decoration-[rgb(var(--accent))] underline-offset-4"
           >
             Giants
