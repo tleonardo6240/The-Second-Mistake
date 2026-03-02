@@ -4,34 +4,40 @@ import Link from "next/link";
 export const metadata = {
   title: "The Second Mistake",
   description:
-    "Sports are not always about winning. Sometimes its simply about learning. And so is life.",
+    "Sports are not simply about winning. Sometimes its simply about learning. And so is life.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>
-        <div className="border-b border-neutral-200 bg-white/85 backdrop-blur">
+        <div
+          className="border-b"
+          style={{
+            background: "rgb(var(--accent))",
+            borderColor: "rgba(255,255,255,0.18)",
+          }}
+        >
           <div className="container-page flex items-center justify-between py-4">
             <div className="flex items-baseline gap-3">
-              <Link href="/" className="text-[15px] font-semibold tracking-tight">
+              <Link href="/" className="text-[15px] font-semibold tracking-tight text-white">
                 The Second Mistake
               </Link>
-              <span className="hidden text-sm text-neutral-500 md:inline">
+              <span className="hidden text-sm text-white/70 md:inline">
                 Process over outcome.
               </span>
             </div>
 
-            <nav className="flex items-center gap-5 text-sm text-neutral-600">
+            <nav className="flex items-center gap-5 text-sm text-white/80">
               {/* MLB dropdown */}
               <div className="relative group">
                 <Link
                   href="/section/mlb"
-                  className="inline-flex items-center gap-1 hover:text-neutral-900 hover:underline decoration-[rgb(var(--accent))] decoration-2 underline-offset-[6px]"
+                  className="inline-flex items-center gap-1 text-white/85 hover:text-white hover:underline decoration-white/70 decoration-2 underline-offset-[6px]"
                 >
                   MLB
                   <svg
-                    className="h-3.5 w-3.5 opacity-70 group-hover:opacity-100"
+                    className="h-3.5 w-3.5 opacity-80 group-hover:opacity-100"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                     aria-hidden="true"
@@ -59,14 +65,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 >
                   <Link
                     href="/section/mlb"
-                    className="block rounded-lg px-3 py-2 text-sm text-neutral-800 hover:bg-neutral-50"
+                    className="block rounded-lg px-3 py-2 text-sm text-neutral-900 hover:bg-neutral-50"
                     role="menuitem"
                   >
                     All MLB
                   </Link>
                   <Link
                     href="/tags/yankees"
-                    className="block rounded-lg px-3 py-2 text-sm text-neutral-800 hover:bg-neutral-50"
+                    className="block rounded-lg px-3 py-2 text-sm text-neutral-900 hover:bg-neutral-50"
                     role="menuitem"
                   >
                     Yankees
@@ -77,7 +83,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               {/* NFL */}
               <Link
                 href="/section/nfl"
-                className="hover:text-neutral-900 hover:underline decoration-[rgb(var(--accent))] decoration-2 underline-offset-[6px]"
+                className="text-white/85 hover:text-white hover:underline decoration-white/70 decoration-2 underline-offset-[6px]"
               >
                 NFL
               </Link>
@@ -85,7 +91,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               {/* Subscribe pill */}
               <Link
                 href="/"
-                className="ml-1 rounded-full border border-neutral-300 bg-white px-3 py-1 text-xs font-medium text-neutral-900 hover:border-neutral-400"
+                className="ml-1 rounded-full border border-white/30 bg-white/10 px-3 py-1 text-xs font-medium text-white hover:bg-white/15"
               >
                 Subscribe
               </Link>
