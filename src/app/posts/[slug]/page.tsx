@@ -7,8 +7,14 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 
 const postsDir = path.join(process.cwd(), "content", "posts");
 
-export default async function PostPage({ params }: { params: { slug: string } }) {
-  const file = path.join(postsDir, `${params.slug}.mdx`);
+export default async function PostPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+
+  const file = path.join(postsDir, `${slug}.mdx`);
   if (!fs.existsSync(file)) return notFound();
 
   const raw = fs.readFileSync(file, "utf8");
@@ -30,7 +36,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
       </div>
 
       <article className="prose prose-neutral max-w-none">
-        <h1>{String(data.title ?? params.slug)}</h1>
+        <h1>{String(data.title ?? slug)}</h1>
         <p className="text-sm text-neutral-500">
           {String(data.date ?? "")}
           {tags.length ? ` • ${tags.join(" · ")}` : ""}
