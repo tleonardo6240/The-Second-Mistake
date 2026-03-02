@@ -4,8 +4,8 @@ import { getAllPosts, getPostsBySection, getAllTags } from "@/lib/posts";
 
 export default function HomePage() {
   const posts = getAllPosts();
-  const MLB = getPostsBySection("MLB").slice(0, 3);
-  const NFL = getPostsBySection("NFL").slice(0, 3);
+  const MLB = getPostsBySection("mlb").slice(0, 3);
+  const NFL = getPostsBySection("nfl").slice(0, 3);
   const tags = getAllTags().slice(0, 12);
 
   return (
