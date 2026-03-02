@@ -6,13 +6,14 @@
   color-scheme: light;
 
   /* Core palette */
-  --bg: 255 255 255;
-  --fg: 17 17 17;
+  --bg: 250 250 250;        /* off-white page background */
+  --surface: 255 255 255;   /* cards/surfaces */
+  --fg: 13 19 33;           /* near-black with navy bias */
   --muted: 82 82 82;
-  --border: 229 229 229;
 
-  --accent: 20 184 166; /* teal */
-  --accent-2: 15 118 110; /* darker teal */
+  /* Yankees navy accent */
+  --accent: 12 35 64;       /* #0C2340 */
+  --accent-2: 19 48 87;     /* #133057 */
 }
 
 body {
@@ -24,17 +25,22 @@ a {
   text-underline-offset: 3px;
 }
 
+a:hover {
+  color: rgb(var(--accent-2));
+}
+
 ::selection {
-  background: rgba(var(--accent), 0.22);
+  background: rgba(var(--accent), 0.16);
 }
 
 /* Utility classes */
 .container-page {
-  @apply mx-auto max-w-4xl px-4;
+  @apply mx-auto max-w-5xl px-4;
 }
 
 .card {
-  @apply rounded-2xl border border-neutral-200 bg-white;
+  @apply rounded-2xl border border-neutral-200;
+  background: rgb(var(--surface));
 }
 
 .card-hover {
@@ -43,11 +49,4 @@ a {
 
 .kicker {
   @apply text-[11px] font-semibold uppercase tracking-[0.14em] text-neutral-500;
-}
-
-.accent-link {
-  color: rgb(var(--accent-2));
-}
-.accent-link:hover {
-  color: rgb(var(--accent));
 }
