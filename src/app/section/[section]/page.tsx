@@ -16,7 +16,7 @@ export default async function SectionPage({
     <main className="container-page py-10">
       <h1 className="text-2xl font-semibold">{title}</h1>
 
-      {section === "MLB" && (
+      {section === "mlb" && (
         <div className="mt-3 text-sm text-neutral-600">
           Subsection:{" "}
           <Link
@@ -28,7 +28,7 @@ export default async function SectionPage({
         </div>
       )}
 
-      {section === "NFL" && (
+      {section === "nfl" && (
         <div className="mt-3 text-sm text-neutral-600">
           Subsection:{" "}
           <Link
