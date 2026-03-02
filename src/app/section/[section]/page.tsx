@@ -10,7 +10,7 @@ export default async function SectionPage({
   const section = rawSection.toLowerCase() as Section;
 
   const posts = getPostsBySection(section);
-  const title = section === "MLB" ? "MLB" : section === "NFL" ? "NFL" : rawSection;
+  const title = section === "mlb" ? "MLB" : section === "nfl" ? "NFL" : rawSection;
 
   return (
     <main className="container-page py-10">
