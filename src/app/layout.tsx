@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata = {
   title: "The Second Mistake",
   description:
-    "Sports are not simply about winning. Sometimes its simply about learning. And so is life.",
+    "Sports are not always about winning. Sometimes its simply about learning. And so is life.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
