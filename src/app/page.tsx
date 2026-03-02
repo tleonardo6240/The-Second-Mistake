@@ -1,3 +1,4 @@
+// src/app/page.tsx
 import Link from "next/link";
 import { getAllPosts, getPostsBySection, getAllTags } from "@/lib/posts";
 
@@ -36,6 +37,12 @@ export default function HomePage() {
               >
                 NFL
               </Link>
+              <Link
+                href="/tags/giants"
+                className="hover:text-neutral-900 hover:underline decoration-[rgb(var(--accent))] underline-offset-4"
+              >
+                NYG
+              </Link>
             </nav>
           </div>
         </aside>
@@ -43,11 +50,11 @@ export default function HomePage() {
         {/* Main column */}
         <div>
           <header className="space-y-3">
-            <div className="kicker">MLB • NFL • Yankees</div>
+            <div className="kicker">MLB • NFL • Yankees • Giants</div>
             <h1 className="text-4xl font-semibold tracking-tight">The Second Mistake</h1>
             <div className="h-[2px] w-12 rounded" style={{ background: "rgb(var(--accent))" }} />
             <p className="max-w-2xl text-neutral-600">
-              Sports are not simply about winning. Sometimes its simply about learning. And so is
+              Sports are not always about winning. Sometimes its simply about learning. And so is
               life.
             </p>
           </header>
@@ -102,6 +109,7 @@ export default function HomePage() {
                   <div className="kicker">
                     {p.section}
                     {p.tags.includes("yankees") ? " • yankees" : ""}
+                    {p.tags.includes("giants") ? " • giants" : ""}
                   </div>
 
                   <h4 className="mt-2 text-base font-semibold">
@@ -159,6 +167,20 @@ export default function HomePage() {
               </Link>
             </div>
 
+            {/* Giants card (new) */}
+            <div className="card p-5">
+              <div className="kicker">Giants</div>
+              <p className="mt-2 text-sm text-neutral-600">
+                Weekly notes, decisions, and what I learned — no tilt.
+              </p>
+              <Link
+                href="/tags/giants"
+                className="mt-3 inline-block text-sm hover:underline decoration-[rgb(var(--accent))] underline-offset-4"
+              >
+                Read Giants →
+              </Link>
+            </div>
+
             <div className="card p-5">
               <div className="kicker">Newsletter</div>
               <p className="mt-2 text-sm text-neutral-600">
@@ -187,6 +209,18 @@ export default function HomePage() {
                   href="/section/nfl"
                 >
                   NFL →
+                </Link>
+                <Link
+                  className="hover:underline decoration-[rgb(var(--accent))] underline-offset-4"
+                  href="/tags/yankees"
+                >
+                  Yankees →
+                </Link>
+                <Link
+                  className="hover:underline decoration-[rgb(var(--accent))] underline-offset-4"
+                  href="/tags/giants"
+                >
+                  Giants →
                 </Link>
               </div>
             </div>
